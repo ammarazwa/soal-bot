@@ -1,11 +1,14 @@
-# difficulty_classifier.py
 import joblib
 import os
 
-model_path = os.path.join("model", "difficulty_model.pkl")
-model = joblib.load(model_path)
+_model = None
+
+def load_model():
+    global _model
+    if _model is None:
+        model_path = os.path.join("model", "difficulty_model.pkl")
+        _model = joblib.load(model_path)
 
 def predict_difficulty(sentence):
-    return model.predict([sentence])[0]
-
-
+    load_model()
+    return _model.predict([sentence])[0]
