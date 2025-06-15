@@ -38,7 +38,10 @@ soal-bot/
 │   ├── kmeans_topic.pkl
 │   └── kalimat_difficulty_100.xlsx
 └── train/
-    └── (notebooks/scripts training model - opsional)
+    └── test_overfitting.py
+    └── train_difficulty_model.py
+    └── train_topic_cluster.py
+
 ```
 
 ---
@@ -122,9 +125,14 @@ except:
 
 ---
 
-## 👨‍💻 Pengembang
+## 👨‍💻 Team
 
-- **Ammara Azwa Diena** – Teknik Informatika Unpad 2025
+| Nama                   | NPM                                  |
+|------------------------|--------------------------------------|
+|  Senia Nur Hasanah     | 140810230021                         |
+|  Siti Nailah Eko       | 140810230059                         |
+|  Ammara Azwadiena A    | 140810230073                         |
+
 
 ---
 
