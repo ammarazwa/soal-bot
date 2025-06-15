@@ -1,6 +1,7 @@
-streamlit
-pymupdf
+streamlit==1.33.0
+requests
+spacy
+fpdf
 scikit-learn
 pandas
-openpyxl
-joblib
+numpy
