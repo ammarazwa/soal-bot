@@ -1,10 +1,16 @@
-# topic_cluster.py
 import joblib
 import os
 
-model_path = os.path.join("model", "kmeans_topic.pkl")
-model, vectorizer = joblib.load(model_path)
+_model = None
+_vectorizer = None
+
+def load_model():
+    global _model, _vectorizer
+    if _model is None or _vectorizer is None:
+        model_path = os.path.join("model", "kmeans_topic.pkl")
+        _model, _vectorizer = joblib.load(model_path)
 
 def predict_cluster(sentence):
-    X = vectorizer.transform([sentence])
-    return model.predict(X)[0]
+    load_model()
+    X = _vectorizer.transform([sentence])
+    return _model.predict(X)[0]
